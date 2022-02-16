@@ -24,6 +24,12 @@ class Pet():
         self.cheerfulness_change = cheerfulness_change,
         self.mood_change = mood_change
 
+    def decrease_stats(self):
+        self.fullness -= fullness_change
+        self.activity -= activity_change
+        self.cheerfulness -= cheerfulness_change
+        self.mood -= mood_change
+
     def feed(self, calories):
         self.fullness += calories
         print(f'{self.name} съел {calories} калорий,'
